@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "broken_counter",
+  "version": "${version}",
+  "name": "Broken Counter",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/broken_counter/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.mrsneack.client.Broken_counterDataGenerator"
+    ],
+    "client": [
+      "com.mrsneack.client.Broken_counterClient"
+    ],
+    "main": [
+      "com.mrsneack.Broken_counter"
+    ]
+  },
+  "mixins": [
+    "broken_counter.mixins.json",
+    {
+      "config": "broken_counter.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
