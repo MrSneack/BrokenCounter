@@ -1,29 +1,31 @@
 {
   "schemaVersion": 1,
-  "id": "broken_counter",
+  "id": "broken_warnings",
   "version": "${version}",
-  "name": "Broken Counter",
+  "name": "Broken Warnings",
   "description": "",
-  "authors": [],
+  "authors": [
+    "MrSneack"
+  ],
   "contact": {},
   "license": "All-Rights-Reserved",
-  "icon": "assets/broken_counter/icon.png",
+  "icon": "assets/broken_warnings/icon.png",
   "environment": "client",
   "entrypoints": {
     "fabric-datagen": [
-      "com.mrsneack.client.Broken_counterDataGenerator"
+      "com.mrsneack.client.Broken_warningsDataGenerator"
     ],
     "client": [
-      "com.mrsneack.client.Broken_counterClient"
+      "com.mrsneack.client.Broken_warningsClient"
     ],
     "main": [
-      "com.mrsneack.Broken_counter"
+      "com.mrsneack.Broken_warnings"
     ]
   },
   "mixins": [
-    "broken_counter.mixins.json",
+    "broken_warnings.mixins.json",
     {
-      "config": "broken_counter.client.mixins.json",
+      "config": "broken_warnings.client.mixins.json",
       "environment": "client"
     }
   ],
